@@ -1,0 +1,12 @@
+ErrorDocument 404 /errors/404.php
+ErrorDocument 403 /errors/404.php
+Deny from all
+<Files *.jpg> 
+Allow from all
+</Files>
+<Files *.png> 
+Allow from all
+</Files>
+<Files favicon.ico> 
+Allow from all
+</Files>

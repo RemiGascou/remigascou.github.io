@@ -1,0 +1,21 @@
+ErrorDocument 404 /errors/404.php
+ErrorDocument 403 /errors/404.php
+Deny from all
+<Files index.php>
+Allow from all
+</Files>
+<Files add_article.php> 
+Allow from all
+</Files>
+<Files edit_article.php> 
+Allow from all
+</Files>
+<Files test.php> 
+Allow from all
+</Files>
+<Files test_2.php> 
+Allow from all
+</Files>
+<Files result_operation_article.php> 
+Allow from all
+</Files>
