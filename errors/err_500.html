@@ -5,28 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ******************************** begin header ******************************** -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="icon" type="image/png" href="/meta/favicon.png">
-<title>Title</title>
-<style media="screen">body {margin-top: 70px;}</style>
-<!-- ******************************** end header ******************************** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/meta/favicon.png">
+    <title>Title</title>
+    <style media="screen">body {margin-top: 70px;}</style>
+    <!-- ******************************** end header ******************************** -->
     <link href="<?php echo $config['root_folder']; ?>styles/search-box.css" rel="stylesheet">
-
-
-    <?php
-        $err_code="500";
-        $err_descr="Page introuvable";
-    ?>
 
 </head>
 <body>
-    <?php include($config["include_path"]."includes/navbar.inc.php"); ?>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <a class="navbar-brand" href="/">Remi Gascou</a>
+            <ul class="navbar-nav">
 
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- ******************************** begin ******************************** -->
     <div class="container">
         <center>
-            <div class="" style="margin-top:10%;font-size: 250px;"><?php echo $err_code; ?></div>
-            <div class="" style="font-size: 75px;"><?php echo $err_descr; ?></div>
+            <div class="" style="margin-top:10%;font-size: 250px;">500</div>
+            <div class="" style="font-size: 75px;">Page introuvable</div>
         </center>
     </div>
     <!-- ******************************** end ********************************** -->
