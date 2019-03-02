@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ******************************** begin header ******************************** -->
-    <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/meta/favicon.png">
-    <title>Title</title>
-    <style media="screen">body {margin-top: 70px;}</style>
-    <!-- ******************************** end header ******************************** -->
-    <link href="/styles/search-box.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="/meta/favicon.png">
+<title>Title</title>
+<style media="screen">body {margin-top: 70px;}</style>
+<!-- ******************************** end header ******************************** -->
+    <link href="<?php echo $config['root_folder']; ?>styles/search-box.css" rel="stylesheet">
+
+
+    <?php
+        $err_code="500";
+        $err_descr="Page introuvable";
+    ?>
 
 </head>
 <body>
@@ -19,8 +25,8 @@
     <!-- ******************************** begin ******************************** -->
     <div class="container">
         <center>
-            <div class="" style="margin-top:10%;font-size: 250px;">403</div>
-            <div class="" style="font-size: 75px;">Page introuvable</div>
+            <div class="" style="margin-top:10%;font-size: 250px;"><?php echo $err_code; ?></div>
+            <div class="" style="font-size: 75px;"><?php echo $err_descr; ?></div>
         </center>
     </div>
     <!-- ******************************** end ********************************** -->
