@@ -103,6 +103,8 @@ class Pagemaker(object):
                 self.htmldata.append("<strong>" + line[2:-2] + "</strong>\n<br>")
             elif line.startswith("_") and line.startswith("_"):
                 self.htmldata.append("<i>" + line[1:-1] + "</i>\n<br>")
+            elif line.startswith(" - "):
+                self.htmldata.append("<ul><li>" + line[1:-1] + "</li></ul>\n<br>")
             elif line.startswith("###### "):
                 self.htmldata.append("<h6>" + line[6+1:] + "</h6>")
             elif line.startswith("##### "):
@@ -116,7 +118,7 @@ class Pagemaker(object):
             elif line.startswith("# "):
                 self.htmldata.append("<h1>" + line[1+1:] + "</h1>")
             else:
-                self.htmldata.append(line)
+                self.htmldata.append(line+"\n")
 
     def exportHTML(self, fileout=""):
         if len(fileout) == 0 and len(self.metadata["title"]) != 0:
@@ -137,6 +139,7 @@ class Pagemaker(object):
             for key in self.metadata.keys():
                 print(key.ljust(maxlen),": ", end="")
                 self.metadata[key] = input()
+            self.parts.set_title(self.metadata["title"])
         f = open(filename, "r")
         data = f.readlines()
         f.close()
